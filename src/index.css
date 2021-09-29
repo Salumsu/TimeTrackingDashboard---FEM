@@ -1,0 +1,314 @@
+:root {
+  --borderRadius: 8px;
+}
+
+attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  background: #0d1323;
+  width: 90%;
+  height: 800px;
+  margin: 80px auto;
+  padding: 120px 90px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  column-gap: 20px;
+}
+
+.container {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: 1.3fr 0.7fr;
+}
+
+#profile {
+  background: #5845ec;
+  height: 110%;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+#profile p,
+#profile h1 {
+  color: #dad2fc;
+}
+
+#profile p {
+  margin-top: 40px;
+}
+
+#profile h1 {
+  font-weight: 500;
+  font-size: 45px;
+}
+
+#icon {
+  height: 90px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+#menu {
+  width: 100%;
+  height: 100%;
+  background: #1e1f4d;
+  border-radius: var(--borderRadius);
+  position: relative;
+  z-index: 0;
+}
+
+#menu ul {
+  padding-left: 20px;
+  padding-top: 70px;
+  list-style-type: none;
+}
+
+#menu ul li {
+  color: #3d3f78;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#menu ul li:hover {
+  cursor: pointer;
+}
+
+#menu ul .active {
+  color: #b3b7cc;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr;
+}
+
+.card-details {
+  background: #1e1f4d;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  color: #b3b7cc;
+  height: 100%;
+  position: relative;
+}
+
+.card-details:hover {
+  cursor: pointer;
+  background: #35387d;
+}
+
+.card-background {
+  height: 110%;
+}
+
+.card-details p {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.card-details img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.card-details img:hover {
+  cursor: pointer;
+}
+
+.card-details h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  color: white;
+  font-size: 100px;
+}
+
+.background {
+  border-radius: var(--borderRadius);
+  height: 120%;
+}
+
+.Play {
+  background: url("./images/icon-play.svg") #56c5e4 no-repeat right;
+}
+
+.Work {
+  background: url("./images/icon-work.svg") #ff8a64 no-repeat right;
+}
+
+.Study {
+  background: url("./images/icon-study.svg") #fc607c no-repeat right;
+}
+
+.Exercise {
+  background: url("./images/icon-exercise.svg") #4ed084 no-repeat right;
+}
+
+.Social {
+  background: url("./images/icon-social.svg") #7335d5 no-repeat right;
+}
+
+.Self-Care {
+  background: url("./images/icon-self-care.svg") #f2c761 no-repeat right;
+}
+
+@media screen and (max-width: 1132px) {
+  .App {
+    height: 900px;
+  }
+
+  .grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  #profile {
+    height: 130px;
+  }
+
+  #profile img {
+    display: inline-block;
+  }
+
+  #profile p {
+    display: inline-block;
+    position: relative;
+    top: -60px;
+    left: 20px;
+  }
+
+  #profile h1 {
+    display: inline-block;
+    position: relative;
+    left: -50px;
+    top: -10px;
+  }
+
+  #menu {
+    transform: translateY(-20px);
+    padding: 0;
+  }
+
+  #menu ul {
+    padding: 40px 20px 5px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #menu ul li {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+  }
+
+  .cards {
+    row-gap: 0px;
+    transform: translateY(60px);
+  }
+
+  .background {
+    height: 150%;
+  }
+
+  .empty {
+    position: relative;
+    top: -180px;
+  }
+
+  .empty ul {
+    position: relative;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    background: #0d1323;
+  }
+
+  .App {
+    padding: 50px 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+  #grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1.7fr;
+  }
+
+  #profile h1 {
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    left: 130px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    transform: translateY(220px);
+  }
+
+  .card p {
+    display: block;
+  }
+
+  .card h2 {
+    display: inline-block;
+    font-size: 40px;
+    margin: 5px;
+  }
+
+  .card h4 {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+  }
+
+  .empty {
+    position: relative;
+    top: 0;
+  }
+
+  .empty ul {
+    top: -2px;
+  }
+}
